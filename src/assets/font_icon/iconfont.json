@@ -1,0 +1,79 @@
+{
+  "id": "2687351",
+  "name": "shop后台管理系统",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "22916255",
+      "name": "private",
+      "font_class": "private",
+      "unicode": "e763",
+      "unicode_decimal": 59235
+    },
+    {
+      "icon_id": "22916256",
+      "name": "data",
+      "font_class": "data",
+      "unicode": "e764",
+      "unicode_decimal": 59236
+    },
+    {
+      "icon_id": "22916268",
+      "name": "drafts",
+      "font_class": "drafts",
+      "unicode": "e765",
+      "unicode_decimal": 59237
+    },
+    {
+      "icon_id": "22916270",
+      "name": "friends",
+      "font_class": "friends",
+      "unicode": "e766",
+      "unicode_decimal": 59238
+    },
+    {
+      "icon_id": "22916285",
+      "name": "emotion",
+      "font_class": "emotion",
+      "unicode": "e767",
+      "unicode_decimal": 59239
+    },
+    {
+      "icon_id": "22918433",
+      "name": "Car",
+      "font_class": "Car",
+      "unicode": "e773",
+      "unicode_decimal": 59251
+    },
+    {
+      "icon_id": "22918451",
+      "name": "Battery",
+      "font_class": "Battery",
+      "unicode": "e774",
+      "unicode_decimal": 59252
+    },
+    {
+      "icon_id": "22918453",
+      "name": "Eye",
+      "font_class": "Eye",
+      "unicode": "e775",
+      "unicode_decimal": 59253
+    },
+    {
+      "icon_id": "22918464",
+      "name": "Stats bar",
+      "font_class": "a-Statsbar",
+      "unicode": "e776",
+      "unicode_decimal": 59254
+    },
+    {
+      "icon_id": "22918493",
+      "name": "Lock unlocked",
+      "font_class": "a-Lockunlocked",
+      "unicode": "e777",
+      "unicode_decimal": 59255
+    }
+  ]
+}
