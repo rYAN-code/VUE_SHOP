@@ -37,7 +37,7 @@ export default {
       loginFormRules: {
         // 验证用户名是否合法
         username: [
-          // required必须填写，返回message，trigger触发事件，blur失去焦点，min、max最小最大
+          // required是必须填写，返回message，trigger触发事件，blur失去焦点，min、max最小最大
           { required: true, message: '请输入用户名', trigger: 'blur' },
           { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
         ],
@@ -59,9 +59,17 @@ export default {
         if (!valid) return
         const { data: res } = await this.$http.post('login', this.loginForm)
         if (res.meta.status !== 200) {
-          console.log('登录失败')
+          // 全局$message
+          return this.$message.error('登录失败')
         } else {
-          console.log('登录成功')
+          this.$message.success('登录成功')
+          //   1、将登录成功之后的token，保存在客户端的sessionStorage中
+          //      1.1、项目中除了登录之外的其他api接口，必须在登录之后才能访问
+          //      1.2、token只应在当前网站打开期间生效，所以将token保存在sessionStorage中
+          console.log(res)
+          sessionStorage.setItem('token', res.data.token)
+          //   2、通过编程式导航跳转到后台主页，路由地址为 /home
+          this.$router.push('/home')
         }
       })
     }
