@@ -13,7 +13,9 @@
       <!-- 侧边栏 -->
       <Ryanaside></Ryanaside>
       <!-- 右侧内容主体 -->
-      <el-main>Main</el-main>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>
