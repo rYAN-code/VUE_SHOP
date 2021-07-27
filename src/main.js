@@ -10,7 +10,7 @@ import './assets/css/global.css'
 import axios from 'axios'
 // import { config } from 'vue/types/umd'
 // 配置请求的根路径
-axios.defaults.baseURL = 'http://timemeetyou.com:8889/api/private/v1/'
+axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
 // axios请求拦截
 axios.interceptors.request.use(config => {
   // 为请求头对象，添加token验证的Authorization
