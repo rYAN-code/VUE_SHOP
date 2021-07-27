@@ -51,7 +51,6 @@ export default {
       this.$http.get('menus').then(data => {
         const { data: res } = data
         this.menuList = res.data
-        console.log(this.menuList)
       })
     },
     toggleCollapse () {
