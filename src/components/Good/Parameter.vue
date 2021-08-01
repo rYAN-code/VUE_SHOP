@@ -173,8 +173,6 @@ export default {
         if (res.meta.status !== 200) {
           return this.$message.error('获取失败！')
         }
-        console.log(res.data)
-        console.log(this.activeName)
         // 使res中的attr_vals变为数组
         res.data.forEach(item => {
           item.attr_vals = item.attr_vals ? item.attr_vals.split(',') : []
