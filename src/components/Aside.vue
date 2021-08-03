@@ -4,7 +4,7 @@
         <!-- 侧边栏 -->
         <!-- 是否使用 vue-router 的模式，启用该模式会在激活导航时以 index 作为 path 进行路由跳转 -->
     <el-menu background-color="#333744" text-color="#fff" active-text-color="#409bff" unique-opened
-      :collapse="isCollapse" :collapse-transition="false" router :default-active="$router.path">
+      :collapse="isCollapse" :collapse-transition="false" router :default-active="$router.path" @select="handleOpen">
       <!-- 一级菜单 -->
       <el-submenu :index="item.id + ''" v-for="item in menuList" :key="item.id">
           <!-- 一级菜单模板区域 -->
@@ -16,12 +16,12 @@
         </template>
         <!-- 二级菜单 -->
         <el-menu-item :index="subItem.path" v-for="subItem in item.children" :key="subItem.id">
-            <template slot="title">
-            <!-- 图标 -->
-          <i class="el-icon-menu"></i>
-          <!-- 文本 -->
-          <span>{{subItem.authName}}</span>
-        </template>
+          <template slot="title">
+              <!-- 图标 -->
+            <i class="el-icon-menu"></i>
+            <!-- 文本 -->
+            <span>{{subItem.authName}}</span>
+          </template>
         </el-menu-item>
       </el-submenu>
     </el-menu>
@@ -51,10 +51,15 @@ export default {
       this.$http.get('menus').then(data => {
         const { data: res } = data
         this.menuList = res.data
+        console.log(this.menuList)
       })
     },
     toggleCollapse () {
       this.isCollapse = !this.isCollapse
+    },
+    handleOpen (index) {
+      this.$store.state.breadcrumbText = index
+      console.log(index)
     }
   }
 }

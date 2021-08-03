@@ -20,9 +20,6 @@
   </el-container>
 </template>
 <script>
-import Vue from 'vue'
-import Ryanaside from '../components/Aside'
-Vue.component('Ryanaside', Ryanaside)
 export default {
   methods: {
     logout () {
